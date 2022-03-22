@@ -11,18 +11,18 @@ option = utils.chooseOptions(input())
 if(option == 1):
     secretWord = utils.enterSecretWord(option)
     infoWord = utils.enterInfoWord(option)
-    utils.niveau1()
+    utils.niveau1(infoWord)
     utils.tryFindWord(input("Entrer un mot pour trouver le mot secret :\n"),
-    secretWord,
-    option,
-    nbTry)
+                      secretWord,
+                      option,
+                      nbTry)
 elif(option == 2):
     secretWord = utils.enterSecretWord(option)
     infoWord = utils.enterInfoWord(option)
     utils.niveau2()
     utils.tryFindWord(input("Entrer un mot pour trouver le mot secret :\n"),
-    secretWord,
-    option,
-    nbTry)
+                      secretWord,
+                      option,
+                      nbTry)
 else:
     print("Aucun niveau selectionné.")
