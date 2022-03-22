@@ -7,6 +7,7 @@ def chooseOptions(result):
         print("numéro incorrect, exit...")
         return 0
 
+
 def enterSecretWord(result):
     if(result == 1):
         print("Demander à une personne tier d'entrer un mot secret...")
@@ -16,6 +17,7 @@ def enterSecretWord(result):
         return input("Entrer mot secret :\n")
     else:
         return ""
+
 
 def enterInfoWord(result):
     if(result == 1):
@@ -27,7 +29,7 @@ def enterInfoWord(result):
 def tryFindWord(tryedWord, secretWord, lvl, nbTry):
     goodChar = 0
     indexChar = 0
-    
+
     nbCharForWin = len(secretWord)
 
     for char in secretWord:
@@ -56,15 +58,19 @@ def showMenu(nbTry):
     print("#--------------------#")
     print("Selectionner le niveau :")
 
-def niveau1():
+
+def niveau1(infoWord):
     print("#--------------------#")
     print("- Le pendu - Niveau 1")
+    print("")
+    print(f"Aide : {infoWord}")
     print("")
     print("- Une réponse avec l'emplacement des lettres bien placées.")
     print("- Le nombre de lettres bien placées.")
     print("- Une information complémentaire du mot choisi.")
     print("")
     print("#--------------------#")
+
 
 def niveau2():
     print("#--------------------#")
@@ -73,6 +79,7 @@ def niveau2():
     print("- Uniquement le nombre de lettre bien placées.")
     print("")
     print("#--------------------#")
+
 
 def showGallow(nbTry):
     if(nbTry == 6):
